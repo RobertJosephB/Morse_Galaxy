@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    float maxSpeed = 3f;                //speed of movement
+    public float maxSpeed = 3f;                //speed of movement
     float shipBoundaries = 0.6f;        //precaution for when the ship touches the edge of the screen
 
     // Start is called before the first frame update
