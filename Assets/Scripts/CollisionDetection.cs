@@ -9,7 +9,6 @@ public class CollisionDetection : MonoBehaviour
     float invulTimer = 0;
     int correctLayer;
 
-
     // Start is called before the first frame update
     void Start()
     {
