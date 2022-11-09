@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour
     public float maxSpeed = 3f;     //speed of movement
     float shipBoundaries = 0.6f;    //precaution for when the ship touches the edge of the screen
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +16,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         //Horizontal Movement
         Vector3 pos = transform.position;
         pos.x += Input.GetAxis("Horizontal") * maxSpeed * Time.deltaTime;  

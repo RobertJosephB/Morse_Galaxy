@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1109963972177969686}
   - component: {fileID: 1109963972177969685}
   - component: {fileID: 1109963972177969682}
+  - component: {fileID: 6945588770514383192}
+  - component: {fileID: -6125569700246292444}
   - component: {fileID: 880676708985581828}
   m_Layer: 6
   m_Name: Bullet
@@ -128,6 +130,33 @@ MonoBehaviour:
   speed: 5
   deactivateTimer: 3
   code: 0
+--- !u!114 &6945588770514383192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109963972177969689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dae97867401d6e4db903338c9705d56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 3
+--- !u!114 &-6125569700246292444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109963972177969689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29dd9844e20063049bb7a506fa1c6c25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  invulPeriod: 0
 --- !u!82 &880676708985581828
 AudioSource:
   m_ObjectHideFlags: 0
@@ -140,8 +169,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 91127fde80f762342b39baf2b837999a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.2
+  m_Pitch: 0.1
   Loop: 0
   Mute: 0
   Spatialize: 0
