@@ -8,9 +8,6 @@ using UnityEngine.Events;
 
 public class MorseCodeFunctionality : MonoBehaviour
 {
-
-    private float startTime, endTime; 
-    //public List<string> input = new List<string>();
     public string code;
     public int max; 
     public int input;
@@ -20,6 +17,8 @@ public class MorseCodeFunctionality : MonoBehaviour
 
     bool clicking = false;
     float totalDownTime = 0;
+
+    public GameObject shot;
 
     public Dictionary<string, char> morse = new Dictionary<string, char>()
     {
@@ -57,19 +56,11 @@ public class MorseCodeFunctionality : MonoBehaviour
         code = "";
         max = 5;
         input = 0;
-        startTime = 0f;
-        endTime = 0f;
+
     }
 
     void Update()
     {
-
-        //if(Input.GetMouseButtonDown(0)) Debug.Log("Pressed left click.");
-        //if(Input.GetMouseButtonDown(1)) Debug.Log("Pressed right click.");
-        //if(Input.GetMouseButtonDown(2)) Debug.Log("Pressed middle click.");
-
-        //if(Input.GetMouseButtonDown(0)) Debug.Log("Pressed left click - .");
-        //if(Input.GetMouseButton(0)) Debug.Log("Long pressed left click - -");
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -133,40 +124,16 @@ public class MorseCodeFunctionality : MonoBehaviour
 
         }
 
-
-        //if(Input.GetMouseButtonDown(0)) 
-        //{
-        //    Debug.Log("Pressed left click - .");
-        //    input++;
-        //    code += '.';
-
-        //    if(input >= max)
-        //    {
-        //        Debug.Log("Max input reached");
-        //        code = "";
-        //        input = 0;
-        //    }
-        //}
-
-        //if(Input.GetMouseButtonDown(2))
-        //{
-        //    Debug.Log("Pressed middle click - -");
-        //    input++;
-        //    code += '-';
-
-        //    if(input >= max)
-        //    {
-        //        Debug.Log("Max input reached");
-        //        code = "";
-        //        input = 0;
-        //    }
-        //}
-
         if(Input.GetMouseButtonDown(1))
         {
             if(morse.ContainsKey(code))
             {
                 Debug.Log("Pressed right click - SHOOT " + morse[code]);
+                Vector3 spawnPosition = GameObject.Find("Player").transform.position;
+                Quaternion spawnRotation = Quaternion.identity;
+
+                GameObject bullet = Instantiate(shot, spawnPosition, spawnRotation) as GameObject;
+                bullet.GetComponent<BulletController>().code = morse[code];
             }
             else 
             {
