@@ -11,9 +11,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - Invulnerable
   - 
   - 
   - 
@@ -44,6 +44,12 @@ TagManager:
   - name: Background
     uniqueID: 2182555657
     locked: 0
-  - name: Playing Area
+  - name: EarthModel
     uniqueID: 3549892527
+    locked: 0
+  - name: Sprites
+    uniqueID: 434237013
+    locked: 0
+  - name: Interface
+    uniqueID: 3729279619
     locked: 0
