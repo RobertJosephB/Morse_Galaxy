@@ -18,6 +18,9 @@ public class MorseCodeFunctionality : MonoBehaviour
     bool clicking = false;
     float totalDownTime = 0;
 
+    public AudioSource audioSource;
+    public AudioClip   ShootAudioClip;
+
     public GameObject shot;
 
     public Dictionary<string, char> morse = new Dictionary<string, char>()
@@ -132,6 +135,7 @@ public class MorseCodeFunctionality : MonoBehaviour
                 Vector3 spawnPosition = GameObject.Find("Player").transform.position;
                 Quaternion spawnRotation = Quaternion.identity;
 
+                audioSource.PlayOneShot(ShootAudioClip);
                 GameObject bullet = Instantiate(shot, spawnPosition, spawnRotation) as GameObject;
                 bullet.GetComponent<BulletController>().code = morse[code];
             }
