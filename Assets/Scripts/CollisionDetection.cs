@@ -15,7 +15,6 @@ public class CollisionDetection : MonoBehaviour
         correctLayer = gameObject.layer;
     }
 
-
     void OnTriggerEnter2D(Collider2D other) {
         Debug.Log("Hit! " + gameObject.name);
 
