@@ -7,10 +7,12 @@ public class PlayerController : MonoBehaviour
     public float maxSpeed = 3f;     //speed of movement
     float shipBoundaries = 0.6f;    //precaution for when the ship touches the edge of the screen
 
+    public AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource.Stop();
     }
 
     // Update is called once per frame
@@ -30,6 +32,14 @@ public class PlayerController : MonoBehaviour
 
         if(pos.x - shipBoundaries < -widthOrthographic) {
             pos.x = -widthOrthographic + shipBoundaries;
+        }
+
+        if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)) {
+            audioSource.Play();
+        }
+
+        if(Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D)) {
+            audioSource.Stop();
         }
 
         //Update the ship position
