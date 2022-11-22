@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6025282906515254969}
   - component: {fileID: 6025282906515254973}
   - component: {fileID: 6025282906515254972}
-  - component: {fileID: 7693946969023348566}
   - component: {fileID: 6025282906515254975}
   m_Layer: 7
   m_Name: Ufos
@@ -77,12 +76,12 @@ SpriteRenderer:
   m_SortingLayerID: 434237013
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0896de1034e064e4d92a747abf941d65, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3b755c69ccf479c49ba3ebbc1d1c5527, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.9, y: 3.6}
+  m_Size: {x: 4.91, y: 3.26}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -105,8 +104,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.9, y: 3.6}
-    newSize: {x: 4.9, y: 3.6}
+    oldSize: {x: 4.91, y: 3.26}
+    newSize: {x: 4.91, y: 3.26}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -128,18 +127,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   invulPeriod: 0
---- !u!114 &7693946969023348566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6025282906515254970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a29a1dd3fbbe1254d8ac3fb911a7b882, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &6025282906515254975
 Rigidbody2D:
   serializedVersion: 4
