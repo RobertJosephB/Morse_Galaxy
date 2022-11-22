@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Horizontal Movement
+        // Horizontal Movement
         Vector3 pos = transform.position;
         pos.x += Input.GetAxis("Horizontal") * maxSpeed * Time.deltaTime;  
 
@@ -48,8 +48,6 @@ public class PlayerController : MonoBehaviour
             
             
         }
-
-        //Update the ship position
         transform.position = pos;
     }
 }
