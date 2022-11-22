@@ -17,12 +17,18 @@ public class CollisionDetection : MonoBehaviour
         correctLayer = gameObject.layer;
     }
 
-    void OnTriggerEnter2D(Collider2D other) {
+    void OnTriggerEnter2D(Collider2D collision) {
         Debug.Log("Hit! " + gameObject.name);
 
-        health--;
-        invulTimer = invulPeriod;
-        gameObject.layer = 8;
+        char bulletLetter = collision.gameObject.GetComponent<BulletController>().code;
+        char ufoLetter = gameObject.GetComponent<UfoController>().morseLetter;
+
+        if(bulletLetter == ufoLetter)
+        {
+            health--;
+            invulTimer = invulPeriod;
+            gameObject.layer = 8;
+        }
     }
 
     // Update is called once per frame

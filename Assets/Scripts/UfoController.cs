@@ -28,11 +28,10 @@ public class UfoController : MonoBehaviour
         }
         
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    void OnCollisionEnter(Collision collision)
     {
-        
+
     }
 
     void changeSprite(Sprite newSprite)
