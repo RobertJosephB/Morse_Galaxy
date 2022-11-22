@@ -13,8 +13,19 @@ public class UfoController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        // spriteRenderer = gameObject.getComponent<spriteRenderer>();
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        switch (morseLetter)
+        {
+            case 'E':
+                changeSprite(spriteArray[0]);
+                break;
+            case 'N':
+                changeSprite(spriteArray[1]);
+                break;
+            case 'T':
+                changeSprite(spriteArray[2]);
+                break;
+        }
         
     }
 
@@ -23,10 +34,9 @@ public class UfoController : MonoBehaviour
     {
         
     }
-    /*
+
     void changeSprite(Sprite newSprite)
     {
         spriteRenderer.sprite = newSprite;
     }
-    */
 }

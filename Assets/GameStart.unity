@@ -190,7 +190,7 @@ SpriteRenderer:
   m_Size: {x: 14.4, y: 10.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &82690179
@@ -653,37 +653,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b79659bbb6bc05843b39f736a7262a62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 1031896726}
-  gradient:
-    serializedVersion: 2
-    key0: {r: 0.8584906, g: 0.13363297, b: 0.13363297, a: 1}
-    key1: {r: 0.8679245, g: 0.8639425, b: 0.15966538, a: 1}
-    key2: {r: 0.7003326, g: 0.8584906, b: 0.14173192, a: 0}
-    key3: {r: 0.41669175, g: 0.9150943, b: 0.047481313, a: 0}
-    key4: {r: 0.15255593, g: 0.8018868, b: 0.12482201, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 13107
-    ctime1: 26214
-    ctime2: 39321
-    ctime3: 52428
-    ctime4: 65535
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 1
-    m_NumColorKeys: 5
-    m_NumAlphaKeys: 2
-  fill: {fileID: 423780796}
 --- !u!114 &1031896726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -764,9 +733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b588861bbf79ebf4abd727cd506ccf28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ufo1: {fileID: 6025282906515254970, guid: 081ea67dd56bb0945aa4223eac9bad4d, type: 3}
-  ufo2: {fileID: 6025282906515254970, guid: 95a9aad3e5adc134a886f38f378519b4, type: 3}
-  ufo3: {fileID: 6025282906515254970, guid: 415e446de717d8c4a89891df434358a5, type: 3}
+  Ufo: {fileID: 6025282906515254970, guid: 8b4ff2a55774a864797074b9fcb85432, type: 3}
   spawnValues: {x: 7.5, y: 6, z: 0}
   hazardCount: 30
   spawnWait: 3
@@ -921,7 +888,7 @@ SpriteRenderer:
   m_Size: {x: 14.4, y: 10.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1204557428
@@ -1063,9 +1030,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9955d1e07552b34daa9bced2c1d2818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
-  currentHealth: 0
-  healthBar: {fileID: 1031896725}
 --- !u!1 &1569420927
 GameObject:
   m_ObjectHideFlags: 0
@@ -1442,7 +1406,7 @@ SpriteRenderer:
   m_Size: {x: 0.63, y: 0.98}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1864223159
