@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
+    int health = 1;
 
     public float speed = 5f;
     public float deactivateTimer = 3f;
@@ -19,6 +20,14 @@ public class BulletController : MonoBehaviour
     void Update()
     {
         Move();
+
+        if(health <= 0) {
+            Destroy(gameObject);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other) {
+        health--;
     }
 
     void Move()

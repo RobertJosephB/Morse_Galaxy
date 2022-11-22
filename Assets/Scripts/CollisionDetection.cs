@@ -9,6 +9,8 @@ public class CollisionDetection : MonoBehaviour
     float invulTimer = 0;
     int correctLayer;
 
+    private Animator animate;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,11 +34,14 @@ public class CollisionDetection : MonoBehaviour
         }
 
         if(health <= 0) {
-            Destroyed();
+
+            TryGetComponent(out animate);
+            if(animate) {
+            animate.SetTrigger("OnEnemyDeath");
+            }
+
+            Destroy(gameObject, 0.5f);
         }
     }
 
-    void Destroyed() {
-        Destroy(gameObject);
-    }
 }

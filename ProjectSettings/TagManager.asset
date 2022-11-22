@@ -50,6 +50,9 @@ TagManager:
   - name: Sprites
     uniqueID: 434237013
     locked: 0
-  - name: Interface
+  - name: UI
     uniqueID: 3729279619
+    locked: 0
+  - name: UI-Icons
+    uniqueID: 2590694829
     locked: 0

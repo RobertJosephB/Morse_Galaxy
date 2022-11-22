@@ -34,10 +34,12 @@ public class PlayerController : MonoBehaviour
             pos.x = -widthOrthographic + shipBoundaries;
         }
 
+        //Audio
         if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)) {
             audioSource.Play();
         }
 
+        //Audio
         if(Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D)) {
             audioSource.Stop();
         }
