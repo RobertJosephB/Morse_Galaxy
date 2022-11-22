@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+ 
 public class PlayerController : MonoBehaviour
 {
     public float maxSpeed = 3f;     //speed of movement
@@ -12,7 +13,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioSource.Stop();
+        audioSource.Stop();  
     }
 
     // Update is called once per frame
@@ -36,15 +37,20 @@ public class PlayerController : MonoBehaviour
 
         //Audio
         if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)) {
-            audioSource.Play();
+            
+            StartCoroutine(AudioFadeScript.FadeIn(audioSource, 0.01f));
+            
         }
 
         //Audio
-        if(Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D)) {
-            audioSource.Stop();
+        else if(Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D)) {
+            StartCoroutine(AudioFadeScript.FadeOut(audioSource, 0.4f));
+            
+            
         }
 
         //Update the ship position
         transform.position = pos;
     }
 }
+
