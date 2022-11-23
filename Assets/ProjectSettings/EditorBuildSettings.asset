@@ -10,11 +10,11 @@ EditorBuildSettings:
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
-    guid: a12e9fd4559e6be44b1cce08d4b87d8f
-  - enabled: 1
-    path: Assets/Scenes/ShipSelection.unity
-    guid: c2460694d2945374aba8f01de3f400c8
+    guid: 32093ae84622bab41aeb8394a40d2acb
   - enabled: 1
     path: Assets/Scenes/MapMenu.unity
-    guid: 7aef301b107afda44b047214bd7b43cc
+    guid: 7792d378424506c41bd32c52ffc5682e
+  - enabled: 1
+    path: Assets/Scenes/ShipSelection.unity
+    guid: c41da6ef0abc22749bcba9a8e20d1fa8
   m_configObjects: {}

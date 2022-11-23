@@ -62,7 +62,8 @@ public class MorseCodeFunctionality : MonoBehaviour
         code = "";
         max = 5;
         input = 0;
-
+        GetComponent<AudioSource>().volume =0.4f;
+        GetComponent<AudioSource>().Stop();
         //MorseLetter = GetComponent<TextMeshProUGUI>();
 
     }
@@ -74,6 +75,8 @@ public class MorseCodeFunctionality : MonoBehaviour
         {
             totalDownTime = 0;
             clicking = true;
+
+            StartCoroutine(AudioFadeScript.clickCheck(GetComponent<AudioSource>()));
         }
 
         if (clicking && Input.GetMouseButton(0))

@@ -12,7 +12,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioSource.Stop();
+        audioSource.Play();
+        audioSource.volume = 0f;
     }
 
     // Update is called once per frame
@@ -36,12 +37,12 @@ public class PlayerController : MonoBehaviour
 
         //Audio
         if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)) {
-             StartCoroutine(AudioFadeScript.FadeIn(audioSource, 0.01f));
+             StartCoroutine(AudioFadeScript.FadeIn(audioSource, 0.5f));
         }
 
         //Audio
         else if(Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D)) {
-            StartCoroutine(AudioFadeScript.FadeOut(audioSource, 0.4f));
+            StartCoroutine(AudioFadeScript.FadeOut(audioSource, 0.5f));
         }
 
         //Update the ship position
