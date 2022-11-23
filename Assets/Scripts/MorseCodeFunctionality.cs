@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using UnityEngine.Events;
-
+using TMPro;
 
 public class MorseCodeFunctionality : MonoBehaviour
 {
@@ -20,6 +20,9 @@ public class MorseCodeFunctionality : MonoBehaviour
 
     public AudioSource audioSource;
     public AudioClip   ShootAudioClip;
+
+    public GameObject letter;
+    public TextMeshProUGUI MorseLetter;
 
     public GameObject shot;
 
@@ -60,6 +63,8 @@ public class MorseCodeFunctionality : MonoBehaviour
         max = 5;
         input = 0;
 
+        //MorseLetter = GetComponent<TextMeshProUGUI>();
+
     }
 
     void Update()
@@ -94,6 +99,8 @@ public class MorseCodeFunctionality : MonoBehaviour
                 if(morse.ContainsKey(code))
                 {
                     Debug.Log(morse[code]);
+                    //MorseLetter.text = morse[code].ToString();
+                    //MorseLetter.text = "B";
                 }
                 else 
                 {
@@ -119,6 +126,8 @@ public class MorseCodeFunctionality : MonoBehaviour
             if(morse.ContainsKey(code))
             {
                 Debug.Log(morse[code]);
+                //MorseLetter.text = morse[code].ToString();
+                //MorseLetter.text = "A";
             }
             else 
             {
@@ -134,6 +143,7 @@ public class MorseCodeFunctionality : MonoBehaviour
                 Debug.Log("Pressed right click - SHOOT " + morse[code]);
                 Vector3 spawnPosition = GameObject.Find("Player").transform.position;
                 Quaternion spawnRotation = Quaternion.identity;
+                //MorseLetter.text = " ";
 
                 audioSource.PlayOneShot(ShootAudioClip);
                 GameObject bullet = Instantiate(shot, spawnPosition, spawnRotation) as GameObject;
