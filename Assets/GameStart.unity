@@ -1051,9 +1051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b588861bbf79ebf4abd727cd506ccf28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ufo1: {fileID: 6025282906515254970, guid: 081ea67dd56bb0945aa4223eac9bad4d, type: 3}
-  ufo2: {fileID: 6025282906515254970, guid: 95a9aad3e5adc134a886f38f378519b4, type: 3}
-  ufo3: {fileID: 6025282906515254970, guid: 415e446de717d8c4a89891df434358a5, type: 3}
+  Ufo: {fileID: 6025282906515254970, guid: 8b4ff2a55774a864797074b9fcb85432, type: 3}
   spawnValues: {x: 7.5, y: 6, z: 0}
   hazardCount: 30
   spawnWait: 3
