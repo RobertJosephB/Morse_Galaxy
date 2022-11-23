@@ -22,7 +22,7 @@ public class CollisionDetection : MonoBehaviour
 
         char bulletLetter = collision.gameObject.GetComponent<BulletController>().code;
         char ufoLetter = gameObject.GetComponent<UfoController>().morseLetter;
-
+        
         if(bulletLetter == ufoLetter) {
             health--;
             invulTimer = invulPeriod;
