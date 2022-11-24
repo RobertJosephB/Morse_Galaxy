@@ -1371,7 +1371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ufo: {fileID: 6025282906515254970, guid: 8b4ff2a55774a864797074b9fcb85432, type: 3}
   spawnValues: {x: 7.5, y: 6, z: 0}
-  hazardCount: 30
+  hazardCount: 15
   spawnWait: 3
   startWait: 0.5
   RadNum: 0
