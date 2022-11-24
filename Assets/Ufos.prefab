@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6025282906515254973}
   - component: {fileID: 6025282906515254972}
   - component: {fileID: 6025282906515254975}
+  - component: {fileID: 1897968478767761779}
   m_Layer: 7
   m_Name: Ufos
   m_TagString: Respawn
@@ -148,3 +149,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1897968478767761779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6025282906515254970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea8c999002f3031469551d914deaa32c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  morseLetter: 0
+  spriteRenderer: {fileID: 0}
+  spriteArray:
+  - {fileID: 21300000, guid: 9fe23cdbec2e31f48a401e2d745f9972, type: 3}
+  - {fileID: 21300000, guid: 59a01e0392b73f549954609262d99381, type: 3}
+  - {fileID: 21300000, guid: eb806bbf76f01374a9f8baaaa994e6d1, type: 3}
