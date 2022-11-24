@@ -128,6 +128,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   invulPeriod: 0
+  destroySequence:
+  - {fileID: 21300000, guid: 0b01c365da2f69e49a00b2585949b89e, type: 3}
+  - {fileID: 21300000, guid: 706771e1ae7383a4babb4ec65748d30f, type: 3}
+  - {fileID: 21300000, guid: b257f9b44bf8eec4a8d5706e510df094, type: 3}
+  - {fileID: 21300000, guid: 32486496205b11c42bab9e4af47972fc, type: 3}
+  - {fileID: 21300000, guid: 7d1ff4dfb82e66d4599c72af66379a80, type: 3}
+  - {fileID: 21300000, guid: 861c65e2680d7314f9a96bf47c88d8db, type: 3}
+  - {fileID: 21300000, guid: e6d7acf9046b55842a4da61485d0f06d, type: 3}
+  - {fileID: 21300000, guid: 7567c6af2107784498b8ab00c5db5ca9, type: 3}
+  - {fileID: 21300000, guid: a22c3b873fe980c4db2c1a34232382e1, type: 3}
+  - {fileID: 21300000, guid: 07d49c6c6d4703b4bb4347fa71c01391, type: 3}
+  - {fileID: 21300000, guid: be9113c958ebf3b419ab34c82ab8ece7, type: 3}
+  - {fileID: 21300000, guid: 990fe066d5603c74c96fee72e78048e6, type: 3}
+  framesPerSecond: 20
 --- !u!50 &6025282906515254975
 Rigidbody2D:
   serializedVersion: 4

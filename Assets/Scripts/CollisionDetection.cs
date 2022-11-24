@@ -9,7 +9,8 @@ public class CollisionDetection : MonoBehaviour
     float invulTimer = 0;
     int correctLayer;
 
-    private Animator animate;
+    public Sprite[] destroySequence;
+    public float framesPerSecond = 20;
 
     // Start is called before the first frame update
     void Start()
@@ -40,13 +41,21 @@ public class CollisionDetection : MonoBehaviour
 
         if(health <= 0) {
 
-            TryGetComponent(out animate);
-            if(animate) {
-            animate.SetTrigger("OnEnemyDeath");
-            }
+            this.PlayDestroyAnimation();
 
             Destroy(gameObject, 0.5f);
         }
+    }
+
+    void PlayDestroyAnimation() {
+        int frame = (int)(Time.time * framesPerSecond);
+
+        //loop
+        frame = frame % destroySequence.Length;
+
+        //set sprite
+        var renderer = GetComponent<SpriteRenderer>();
+        renderer.sprite = destroySequence[frame];
     }
 
 }
