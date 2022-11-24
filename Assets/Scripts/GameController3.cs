@@ -5,26 +5,40 @@ using UnityEngine;
 public class GameController3 : MonoBehaviour
 {
 
-    public GameObject ufo1;
-    public GameObject ufo2;
-    public GameObject ufo3;
-    public GameObject ufo4;
-    public GameObject ufo5;
-    public GameObject ufo6;
-    public GameObject ufo7;
-    public GameObject ufo8;
-    public GameObject megabossVest;
-    public GameObject megabossEst;
-    public GameObject megabossSt;
-    public GameObject megabossT;
+    public GameObject Ufo;
     public Vector3 spawnValues;
     public int hazardCount;
 
     public float spawnWait;
     public float startWait;
     public float RadNum = 0f;
-    public float bossDelay;
+    public float BossDelay;
 
+    char[] morseLevelOne = { 'E', 'N', 'T', 'S', 'M', 'G','V','Y' };
+
+
+    Dictionary<string, char> morseLevelTwo = new Dictionary<string, char>()
+    {
+        {".", 'E'},
+        {"-.", 'N'},
+        {"-", 'T'},
+        {"...", 'S'},
+        {"--", 'M'},
+        {"--.", 'G'}
+    };
+
+    Dictionary<string, char> morseLevelThree = new Dictionary<string, char>()
+    {
+        {".", 'E'},
+        {"-.", 'N'},
+        {"-", 'T'},
+        {"...", 'S'},
+        {"--", 'M'},
+        {"--.", 'G'},
+        {"...-", 'V'},
+        {"-.--", 'Y'}
+
+    };
 
     // Start is called before the first frame update
     void Start()
@@ -49,60 +63,38 @@ public class GameController3 : MonoBehaviour
             Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.y), spawnValues.y, spawnValues.z);
             Quaternion spawnRotation = Quaternion.identity;
 
+            System.Random rand = new System.Random();
 
-            RadNum = Random.Range(1, 9);
+            GameObject ufo = Instantiate(Ufo, spawnPosition, spawnRotation) as GameObject;
+            ufo.GetComponent<UfoController>().morseLetter = morseLevelOne[rand.Next(8)];
 
-            switch (RadNum)
+
+
+
+            if(i == hazardCount - 1)
             {
-                case 1:
-                    Instantiate(ufo1, spawnPosition, spawnRotation);
-                    break;
-                case 2:
-                    Instantiate(ufo2, spawnPosition, spawnRotation);
-                    break;
-                case 3:
-                    Instantiate(ufo3, spawnPosition, spawnRotation);
-                    break;
-                case 4:
-                    Instantiate(ufo4, spawnPosition, spawnRotation);
-                    break;
-                case 5:
-                    Instantiate(ufo5, spawnPosition, spawnRotation);
-                    break;
-                case 6:
-                    Instantiate(ufo6, spawnPosition, spawnRotation);
-                    break;
-                case 7:
-                    Instantiate(ufo7, spawnPosition, spawnRotation);
-                    break;
-                case 8:
-                    Instantiate(ufo8, spawnPosition, spawnRotation);
-                    break;
-
-                default:
-                    // code block
-                    break;
-            }
-
-            if (i == hazardCount - 1)
-            {
-                yield return new WaitForSeconds(bossDelay);
+                yield return new WaitForSeconds(BossDelay);
                 spawnPosition = new Vector3(0, spawnValues.y, spawnValues.z);
                 spawnRotation = Quaternion.identity;
-                Instantiate(megabossT, spawnPosition, spawnRotation);
-                //yield return new WaitForSeconds(startWait);
-                Instantiate(megabossSt, spawnPosition, spawnRotation);
-                //yield return new WaitForSeconds(startWait);
-                Instantiate(megabossEst, spawnPosition, spawnRotation);
-                //yield return new WaitForSeconds(startWait);
-                Instantiate(megabossVest, spawnPosition, spawnRotation);
-                //yield return new WaitForSeconds(startWait);
+                ufo = Instantiate(Ufo, spawnPosition, spawnRotation) as GameObject;
+                ufo.GetComponent<UfoController>().morseLetter2 = 'T' ;
+
+                spawnPosition = new Vector3(0, spawnValues.y, spawnValues.z);
+                spawnRotation = Quaternion.identity;
+                ufo = Instantiate(Ufo, spawnPosition, spawnRotation) as GameObject;
+                ufo.GetComponent<UfoController>().morseLetter2 = 'S';
+
+                spawnPosition = new Vector3(0, spawnValues.y, spawnValues.z);
+                spawnRotation = Quaternion.identity;
+                ufo = Instantiate(Ufo, spawnPosition, spawnRotation) as GameObject;
+                ufo.GetComponent<UfoController>().morseLetter2 = 'E';
+
+                spawnPosition = new Vector3(0, spawnValues.y, spawnValues.z);
+                spawnRotation = Quaternion.identity;
+                ufo = Instantiate(Ufo, spawnPosition, spawnRotation) as GameObject;
+                ufo.GetComponent<UfoController>().morseLetter2 = 'V';
             }
             yield return new WaitForSeconds(spawnWait);
         }
-
-
-
-
     }
 }
