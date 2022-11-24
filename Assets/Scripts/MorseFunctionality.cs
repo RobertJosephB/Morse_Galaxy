@@ -19,6 +19,7 @@ public class MorseFunctionality : MonoBehaviour
     bool clicking = false;
     float totalDownTime = 0;
 
+    public new AudioSource audio;
     public TextMeshProUGUI morseCode;
 
     public Dictionary<string, char> morse = new Dictionary<string, char>()
@@ -57,6 +58,8 @@ public class MorseFunctionality : MonoBehaviour
         code = "";
         max = 5;
         input = 0;
+        audio.volume =0.4f;
+        audio.Stop();
 
         morseCode = GetComponent<TextMeshProUGUI>();
 
@@ -69,6 +72,7 @@ public class MorseFunctionality : MonoBehaviour
         {
             totalDownTime = 0;
             clicking = true;
+            StartCoroutine(AudioFadeScript.clickCheck(audio));
         }
 
         if (clicking && Input.GetMouseButton(0))
