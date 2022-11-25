@@ -13,6 +13,8 @@ public class GameController3 : MonoBehaviour
     public float startWait;
     public float RadNum = 0f;
     public float BossDelay;
+    public float BossGravity;
+    private Rigidbody2D rb;
 
     char[] morseLevelOne = { 'E', 'N', 'T', 'S', 'M', 'G','V','Y' };
 
@@ -73,26 +75,35 @@ public class GameController3 : MonoBehaviour
 
             if(i == hazardCount - 1)
             {
+                
                 yield return new WaitForSeconds(BossDelay);
                 spawnPosition = new Vector3(0, spawnValues.y, spawnValues.z);
                 spawnRotation = Quaternion.identity;
                 ufo = Instantiate(Ufo, spawnPosition, spawnRotation) as GameObject;
                 ufo.GetComponent<UfoController>().morseLetter2 = 'T' ;
+                rb = ufo.GetComponent<Rigidbody2D>();
+                rb.gravityScale = BossGravity;
 
                 spawnPosition = new Vector3(0, spawnValues.y, spawnValues.z);
                 spawnRotation = Quaternion.identity;
                 ufo = Instantiate(Ufo, spawnPosition, spawnRotation) as GameObject;
                 ufo.GetComponent<UfoController>().morseLetter2 = 'S';
+                rb = ufo.GetComponent<Rigidbody2D>();
+                rb.gravityScale = BossGravity;
 
                 spawnPosition = new Vector3(0, spawnValues.y, spawnValues.z);
                 spawnRotation = Quaternion.identity;
                 ufo = Instantiate(Ufo, spawnPosition, spawnRotation) as GameObject;
                 ufo.GetComponent<UfoController>().morseLetter2 = 'E';
+                rb = ufo.GetComponent<Rigidbody2D>();
+                rb.gravityScale = BossGravity;
 
                 spawnPosition = new Vector3(0, spawnValues.y, spawnValues.z);
                 spawnRotation = Quaternion.identity;
                 ufo = Instantiate(Ufo, spawnPosition, spawnRotation) as GameObject;
                 ufo.GetComponent<UfoController>().morseLetter2 = 'V';
+                rb = ufo.GetComponent<Rigidbody2D>();
+                rb.gravityScale = BossGravity;
             }
             yield return new WaitForSeconds(spawnWait);
         }

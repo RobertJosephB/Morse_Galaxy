@@ -1123,6 +1123,7 @@ MonoBehaviour:
   startWait: 0.5
   RadNum: 0
   BossDelay: 15
+  BossGravity: 0.005
 --- !u!4 &653058425
 Transform:
   m_ObjectHideFlags: 0
