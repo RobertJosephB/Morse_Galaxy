@@ -1553,8 +1553,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ufo: {fileID: 6025282906515254970, guid: f30df623fe9505e4c815582eb5a46d36, type: 3}
   spawnValues: {x: 7.5, y: 3, z: 0}
-  hazardCount: 5
-  spawnWait: 3
+  hazardCount: 100
+  spawnWait: 2.5
   startWait: 0.5
   RadNum: 0
 --- !u!4 &1564638848
@@ -2105,7 +2105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currentHealth: 0
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 230277307}
 --- !u!212 &1785524597
 SpriteRenderer:
   m_ObjectHideFlags: 0
