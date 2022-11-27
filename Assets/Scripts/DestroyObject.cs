@@ -5,19 +5,28 @@ using UnityEngine;
 public class DestroyObject : MonoBehaviour
 {
 
+    public GameObject TutorialPanel;
+
     public void start()
     {  
-        Debug.Log("Test");
     }
 
     public void update()
     {
-        Debug.Log("Test");
-        if(Input.GetKey(KeyCode.Space))
-            {
-                Debug.Log("Escape pressed");
-                Destroy(gameObject);
-            }
+       
+    }
 
+
+    public void resumeOnClose()
+    {
+
+
+        if (TutorialPanel.activeInHierarchy == true)
+        {
+            TutorialPanel.SetActive(false);
+            Time.timeScale = 1;
+        }
+
+    
     }
 }
