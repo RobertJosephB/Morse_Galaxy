@@ -17,4 +17,9 @@ public class SceneChanges : MonoBehaviour
     {
         SceneManager.LoadScene("MapMenu");
     }
+    public void quitGame()
+    {
+        Debug.Log("QUITTING");
+        Application.Quit();
+    }
 }
