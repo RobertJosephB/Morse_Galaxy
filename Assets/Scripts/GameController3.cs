@@ -6,6 +6,8 @@ public class GameController3 : MonoBehaviour
 {
 
     public GameObject Ufo;
+    public GameObject VictoryPanel;
+    public GameObject SettingsPanel;
     public Vector3 spawnValues;
     public int hazardCount;
 
@@ -104,8 +106,32 @@ public class GameController3 : MonoBehaviour
                 ufo.GetComponent<UfoController>().morseLetter2 = 'V';
                 rb = ufo.GetComponent<Rigidbody2D>();
                 rb.gravityScale = BossGravity;
+
+
+                yield return new WaitForSeconds (25);
+                Debug.Log("Display Victory Panel");
+                whenDoneSpawning();
+
+
             }
             yield return new WaitForSeconds(spawnWait);
         }
     }
+
+
+
+    public void whenDoneSpawning()
+    {
+        if (VictoryPanel.activeInHierarchy == false)
+        {
+            VictoryPanel.SetActive(true);
+            SettingsPanel.SetActive(false);
+            Time.timeScale = 0;
+        }
+
+    }
+
+
+
+
 }

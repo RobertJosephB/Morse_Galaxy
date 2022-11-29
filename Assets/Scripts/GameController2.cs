@@ -6,8 +6,11 @@ public class GameController2 : MonoBehaviour
 {
 
     public GameObject Ufo;
+    public GameObject VictoryPanel;
+    public GameObject SettingsPanel;
     public Vector3 spawnValues;
     public int hazardCount;
+    public int spawned = 0;
 
     public float spawnWait;
     public float startWait;
@@ -89,6 +92,15 @@ public class GameController2 : MonoBehaviour
             ;
             */
 
+            spawned++;
+            Debug.Log(spawned);
+            if(spawned == hazardCount)
+            {
+                yield return new WaitForSeconds (20);
+                Debug.Log("Display Victory Panel");
+                whenDoneSpawning();
+            }
+
             yield return new WaitForSeconds(spawnWait);
         }
 
@@ -96,4 +108,18 @@ public class GameController2 : MonoBehaviour
 
 
     }
+
+
+    public void whenDoneSpawning()
+    {
+        if (VictoryPanel.activeInHierarchy == false)
+        {
+            VictoryPanel.SetActive(true);
+            SettingsPanel.SetActive(false);
+            Time.timeScale = 0;
+        }
+
+    }
+
+
 }
