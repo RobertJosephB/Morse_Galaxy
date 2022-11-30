@@ -11,7 +11,7 @@ public static class AudioFadeScript
         float startVolume = audioSource.volume;
         float previous;
 
-        while (audioSource.volume > 0)
+        while (audioSource.volume  > 0)
         {
             previous =  audioSource.volume;
             audioSource.volume -= startVolume * Time.deltaTime / FadeTime;
