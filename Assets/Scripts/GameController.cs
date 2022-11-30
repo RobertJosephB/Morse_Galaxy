@@ -6,8 +6,11 @@ public class GameController : MonoBehaviour
 {
 
     public GameObject Ufo;
+    public GameObject VictoryPanel;
+    public GameObject SettingsPanel;
     public Vector3 spawnValues;
     public int hazardCount;
+    public int spawned = 0;
 
     public float spawnWait;
     public float startWait;
@@ -65,6 +68,7 @@ public class GameController : MonoBehaviour
 
         yield return new WaitForSeconds (startWait);
 
+        
         for (int i = 0; i < hazardCount; i++) {
             
             Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.y), spawnValues.y, spawnValues.z);
@@ -86,12 +90,32 @@ public class GameController : MonoBehaviour
                 Instantiate(ufo3, spawnPosition, spawnRotation);
             ;
             */
+            spawned++;
+            Debug.Log(spawned);
+            if(spawned == hazardCount)
+            {
+                yield return new WaitForSeconds (20);
+                Debug.Log("Display Victory Panel");
+                whenDoneSpawning();
+            }
 
             yield return new WaitForSeconds (spawnWait);
         }
 
 
 
+
+    }
+
+
+    public void whenDoneSpawning()
+    {
+        if (VictoryPanel.activeInHierarchy == false)
+        {
+            VictoryPanel.SetActive(true);
+            SettingsPanel.SetActive(false);
+            Time.timeScale = 0;
+        }
 
     }
 }

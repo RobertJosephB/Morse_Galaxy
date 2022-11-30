@@ -9,6 +9,9 @@ public class Earth : MonoBehaviour
     public int currentHealth;
     public HealthBar healthBar;
 
+    public GameObject DefeatPanel;
+    public GameObject SettingsPanel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,12 +25,26 @@ public class Earth : MonoBehaviour
         healthBar.SetHealth(currentHealth);
         
         if(currentHealth <= 0) {
-            Destroy(gameObject);
-            SceneManager.LoadScene("MainMenu");
+            whenHealthDepleted();
         }
     }
 
     void OnTriggerEnter2D(Collider2D other) {
         currentHealth--; 
     }     
+
+    public void whenHealthDepleted()
+    {
+        if (DefeatPanel.activeInHierarchy == false)
+        {
+            DefeatPanel.SetActive(true);
+            SettingsPanel.SetActive(false);
+            Time.timeScale = 0;
+        }
+
+    }
+
+
+
+
 }
