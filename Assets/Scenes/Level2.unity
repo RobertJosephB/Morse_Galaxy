@@ -3806,9 +3806,9 @@ MonoBehaviour:
   VictoryPanel: {fileID: 917593435}
   SettingsPanel: {fileID: 830248307}
   spawnValues: {x: 7.5, y: 6, z: 0}
-  hazardCount: 30
+  hazardCount: 40
   spawned: 0
-  spawnWait: 3
+  spawnWait: 2.5
   startWait: 0.5
   RadNum: 0
 --- !u!1 &2082216224
