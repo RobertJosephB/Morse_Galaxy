@@ -1559,6 +1559,7 @@ GameObject:
   - component: {fileID: 855906968}
   - component: {fileID: 855906967}
   - component: {fileID: 855906966}
+  - component: {fileID: 855906969}
   - component: {fileID: 855906965}
   - component: {fileID: 855906964}
   m_Layer: 6
@@ -1770,6 +1771,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &855906969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855906963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13cb7c4fc1122674ebbf352941f8febe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRendered: {fileID: 855906967}
+  ShipSpriteAce: {fileID: 21300000, guid: 7d991e887baf9cf47aafee55dfa6d653, type: 3}
+  ShipSpriteHammer: {fileID: 21300000, guid: 0161d73ad906aa84cbaa718120303cc4, type: 3}
+  ShipSpriteManta: {fileID: 21300000, guid: 3807b54b4d760e148b99ac7c782116bb, type: 3}
+  ShipSpriteTalon: {fileID: 21300000, guid: b1267e96c2b32654fbde07c0d2b253d3, type: 3}
 --- !u!1 &917593435
 GameObject:
   m_ObjectHideFlags: 0
@@ -3806,9 +3824,9 @@ MonoBehaviour:
   VictoryPanel: {fileID: 917593435}
   SettingsPanel: {fileID: 830248307}
   spawnValues: {x: 7.5, y: 6, z: 0}
-  hazardCount: 30
+  hazardCount: 40
   spawned: 0
-  spawnWait: 3
+  spawnWait: 2.5
   startWait: 0.5
   RadNum: 0
 --- !u!1 &2082216224

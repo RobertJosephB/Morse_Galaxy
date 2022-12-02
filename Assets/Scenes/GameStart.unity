@@ -435,6 +435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 146267107}
   - component: {fileID: 146267106}
+  - component: {fileID: 146267113}
   - component: {fileID: 146267110}
   - component: {fileID: 146267111}
   - component: {fileID: 146267112}
@@ -647,6 +648,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &146267113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146267104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13cb7c4fc1122674ebbf352941f8febe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRendered: {fileID: 146267106}
+  ShipSpriteAce: {fileID: 21300000, guid: 7d991e887baf9cf47aafee55dfa6d653, type: 3}
+  ShipSpriteHammer: {fileID: 21300000, guid: 0161d73ad906aa84cbaa718120303cc4, type: 3}
+  ShipSpriteManta: {fileID: 21300000, guid: 3807b54b4d760e148b99ac7c782116bb, type: 3}
+  ShipSpriteTalon: {fileID: 21300000, guid: b1267e96c2b32654fbde07c0d2b253d3, type: 3}
 --- !u!1 &221445926
 GameObject:
   m_ObjectHideFlags: 0
@@ -1939,9 +1957,9 @@ MonoBehaviour:
   VictoryPanel: {fileID: 893703934}
   SettingsPanel: {fileID: 1121796211}
   spawnValues: {x: 7.5, y: 6, z: 0}
-  hazardCount: 15
+  hazardCount: 20
   spawned: 0
-  spawnWait: 3
+  spawnWait: 2.5
   startWait: 0.5
   RadNum: 0
 --- !u!4 &1070220200
