@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Player
+  - Enemy
+  - Invulnerable
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2182555657
+    locked: 0
+  - name: EarthModel
+    uniqueID: 3549892527
+    locked: 0
+  - name: Sprites
+    uniqueID: 434237013
+    locked: 0
+  - name: UI
+    uniqueID: 3729279619
+    locked: 0
+  - name: UI-Icons
+    uniqueID: 2590694829
+    locked: 0
