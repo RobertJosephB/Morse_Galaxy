@@ -3848,6 +3848,7 @@ GameObject:
   - component: {fileID: 2127224853}
   - component: {fileID: 2127224850}
   - component: {fileID: 2127224852}
+  - component: {fileID: 2127224854}
   - component: {fileID: 2127224851}
   m_Layer: 0
   m_Name: Thruster
@@ -4039,3 +4040,21 @@ Transform:
   m_Father: {fileID: 1102624620}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2127224854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127224849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d3ee5ff0d038c419a0035b41ee546a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thrusters: {fileID: 2127224851}
+  spriteRendered: {fileID: 2127224852}
+  ShipSpriteAce: {fileID: 21300000, guid: 993dccab220942a4c80b7d1fe8942b35, type: 3}
+  ShipSpriteHammer: {fileID: 21300000, guid: be00af89947d6674188403b8daa46f7a, type: 3}
+  ShipSpriteManta: {fileID: 21300000, guid: 1b0d84f88094b504aac67b0c8cb053bb, type: 3}
+  ShipSpriteTalon: {fileID: 21300000, guid: 993dccab220942a4c80b7d1fe8942b35, type: 3}

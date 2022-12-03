@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1109963972177969687}
   - component: {fileID: 1109963972177969686}
+  - component: {fileID: 8798064636636951262}
   - component: {fileID: 1109963972177969685}
   - component: {fileID: 1109963972177969682}
   - component: {fileID: 6945588770514383192}
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1109963972177969689}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.01, y: -1.77, z: 0.089646205}
-  m_LocalScale: {x: 0.6735, y: 0.6735, z: 0.6735}
+  m_LocalScale: {x: 0.45, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -87,6 +88,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8798064636636951262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109963972177969689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0eaa5665a0e4b746afb0d542823fe11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRendered: {fileID: 1109963972177969686}
+  bulletAce: {fileID: 21300000, guid: 3332ad2b448b4f14d9e8f827ed6fef86, type: 3}
+  bulletHammer: {fileID: 21300000, guid: 4e69d4f708d52864d8c835684fc84bc7, type: 3}
+  bulletManta: {fileID: 21300000, guid: 12faf20fef0b7b04cb44d52f71826f76, type: 3}
+  bulletTalon: {fileID: 21300000, guid: 89e2953f14ecb404eb5a63fb762d826d, type: 3}
 --- !u!61 &1109963972177969685
 BoxCollider2D:
   m_ObjectHideFlags: 0
