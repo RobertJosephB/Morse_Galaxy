@@ -94,7 +94,7 @@ public class GameController : MonoBehaviour
             Debug.Log(spawned);
             if(spawned == hazardCount)
             {
-                yield return new WaitForSeconds (20);
+                yield return new WaitForSeconds (15);
                 Debug.Log("Display Victory Panel");
                 whenDoneSpawning();
             }
