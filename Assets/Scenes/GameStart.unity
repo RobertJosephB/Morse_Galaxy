@@ -3420,6 +3420,7 @@ GameObject:
   - component: {fileID: 1713638441}
   - component: {fileID: 1713638444}
   - component: {fileID: 1713638443}
+  - component: {fileID: 1713638445}
   m_Layer: 0
   m_Name: Thruster
   m_TagString: Untagged
@@ -3610,6 +3611,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1713638445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713638440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89060af8624ed7f4f8f2fcdfbd834a62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thrusters: {fileID: 1713638443}
+  spriteRendered: {fileID: 1713638444}
+  ShipSpriteAce: {fileID: 21300000, guid: 993dccab220942a4c80b7d1fe8942b35, type: 3}
+  ShipSpriteHammer: {fileID: 21300000, guid: be00af89947d6674188403b8daa46f7a, type: 3}
+  ShipSpriteManta: {fileID: 21300000, guid: 1b0d84f88094b504aac67b0c8cb053bb, type: 3}
+  ShipSpriteTalon: {fileID: 21300000, guid: 993dccab220942a4c80b7d1fe8942b35, type: 3}
 --- !u!1 &1775027581
 GameObject:
   m_ObjectHideFlags: 0
